@@ -1,0 +1,24 @@
+
+## ds4ling <img src='https://raw.githubusercontent.com/jvcasillas/hex_stickers/master/stickers/ds4ling.png' align='right' width='275px'/>
+
+An R package of datasets and functions made to complement the ds4ling
+course.
+
+Last update: 2021-01-12
+
+### Overview
+
+The purpose of this package is to provide datasets and functions that
+are used in the ds4ling course. The datasets vary in difficulty and
+present different problems common when tidying data.
+
+### Installation
+
+You can install the development version from GitHub with:
+
+    install.packages("devtools")
+    devtools::install_github("jvcasillas/ds4ling")
+
+### Datasets
+
+  - [vocab\_data](#vocab_data)
