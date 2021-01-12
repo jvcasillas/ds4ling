@@ -1,0 +1,58 @@
+---
+output: github_document
+---
+
+```{r echo=FALSE}
+library(knitr)
+```
+
+## ds4ling <img src='https://raw.githubusercontent.com/jvcasillas/hex_stickers/master/stickers/ds4ling.png' align='right' width='275px'/>
+
+An R package of datasets and functions made to complement the ds4ling course.
+
+Last update: `r Sys.Date()`
+
+### Overview
+
+The purpose of this package is to provide datasets and functions that are used in the ds4ling course. 
+The datasets vary in difficulty and present different problems common when tidying data.
+
+### Installation
+
+You can install the development version from GitHub with:
+
+```
+install.packages("devtools")
+devtools::install_github("jvcasillas/ds4ling")
+```
+
+### Datasets
+
+```{r, echo=FALSE, results='asis'}
+#
+# Automate TOC
+#
+# Get list of folders in current directory
+datasets <- dir(path = "./data", pattern = "*.rda")
+
+# remove .rda
+list_elements <- gsub('.rda', '', datasets)
+
+# Use dataframe names for link references
+link_names <- paste0('[', list_elements, ']')
+#
+# Get section ref for link
+#
+# initialize vector
+link_ref <- vector(mode = 'character', length = length(link_names))
+
+# store assignment number
+for (element in 1:length(list_elements)) {
+
+  link_ref[element] <- paste0("(#", list_elements[element], ")")
+
+}
+
+# Combine everything into an unordered list
+cat(paste0('- ', link_names, link_ref, '\n'))
+```
