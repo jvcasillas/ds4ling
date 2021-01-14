@@ -38,21 +38,6 @@ datasets <- dir(path = "./data", pattern = "*.rda")
 # remove .rda
 list_elements <- gsub('.rda', '', datasets)
 
-# Use dataframe names for link references
-link_names <- paste0('[', list_elements, ']')
-#
-# Get section ref for link
-#
-# initialize vector
-link_ref <- vector(mode = 'character', length = length(link_names))
-
-# store assignment number
-for (element in 1:length(list_elements)) {
-
-  link_ref[element] <- paste0("(#", list_elements[element], ")")
-
-}
-
 # Combine everything into an unordered list
-cat(paste0('- ', link_names, link_ref, '\n'))
+cat(paste0('- ', list_elements, '\n'))
 ```

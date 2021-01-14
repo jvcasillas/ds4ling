@@ -21,6 +21,6 @@ You can install the development version from GitHub with:
 
 ### Datasets
 
-  - [test\_scores\_rm](#test_scores_rm)
-  - [test\_scores](#test_scores)
-  - [vocab\_data](#vocab_data)
+  - test\_scores\_rm
+  - test\_scores
+  - vocab\_data
