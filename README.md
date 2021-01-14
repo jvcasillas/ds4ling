@@ -4,7 +4,7 @@
 An R package of datasets and functions made to complement the ds4ling
 course.
 
-Last update: 2021-01-13
+Last update: 2021-01-14
 
 ### Overview
 
@@ -21,5 +21,6 @@ You can install the development version from GitHub with:
 
 ### Datasets
 
+  - [test\_scores\_rm](#test_scores_rm)
   - [test\_scores](#test_scores)
   - [vocab\_data](#vocab_data)
