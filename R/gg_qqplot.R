@@ -17,7 +17,7 @@
 # QQ plot function
 gg_qqplot <- function(vec) {
 
-the_cor <- round(cor(vec, qqnorm(vec)$x), 3)
+the_cor <- round(cor(vec, qqnorm(vec, plot.it = F)$x), 3)
 
 ggplot(tibble(vec), aes(sample = vec)) +
   stat_qq(pch = 21, size = 1.25, fill = "grey") +
