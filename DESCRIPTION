@@ -20,9 +20,9 @@ BugReports: https://github.com/jvcasillas/ds4ling/issues
 Depends:
     R (>= 2.10)
 Imports:
-    stats, 
     ggplot2,
     dplyr,
+    tibble,
     rlang,
     untidydata
 Suggests: 
