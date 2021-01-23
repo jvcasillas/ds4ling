@@ -16,6 +16,7 @@ This function provides the plot theme used in most ds4ling slides
 }
 \examples{
 library(ggplot2)
+library(untidydata)
 ggplot(pre_post, aes(x = test1, y = test2)) +
   geom_point() +
   ds4ling_theme()

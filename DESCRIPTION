@@ -1,7 +1,7 @@
 Package: ds4ling
 Type: Package
 Title: Datasets and Functions developed for SPAN589: Data Science for Linguists
-Version: 0.0.0.9000
+Version: 0.1
 Authors@R: 
     person(given = "Joseph",
            family = "Casillas",
@@ -19,13 +19,17 @@ URL: https://github.com/jvcasillas/ds4ling
 BugReports: https://github.com/jvcasillas/ds4ling/issues
 Depends:
     R (>= 2.10),
-    untidydata,
-    academicWriteR
 Imports:
     ggplot2,
     dplyr,
     tibble,
-    rlang
+    rlang, 
+    untidydata,
+    academicWriteR,
+    lingStuff
 Suggests:
-    lingStuff,
     learnr
+Remotes:
+    github::jvcasillas/untidydata,
+    github::jvcasillas/academicWriteR,
+    github::jvcasillas/lingStuff
