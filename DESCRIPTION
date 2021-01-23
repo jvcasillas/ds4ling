@@ -18,12 +18,14 @@ RoxygenNote: 7.1.1
 URL: https://github.com/jvcasillas/ds4ling
 BugReports: https://github.com/jvcasillas/ds4ling/issues
 Depends:
-    R (>= 2.10)
+    R (>= 2.10),
+    untidydata,
+    academicWriteR
 Imports:
     ggplot2,
     dplyr,
     tibble,
-    rlang,
-    untidydata
-Suggests: 
+    rlang
+Suggests:
+    lingStuff,
     learnr

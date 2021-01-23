@@ -6,11 +6,12 @@
 #' @param ... Pass extra parameters
 #' @keywords plot
 #' @import ggplot2
+#' @import untidydata
 #' @importFrom rlang .data
 #' @export
 #' @examples
 #' library(ggplot2)
-#' ggplot(mtcars, aes(x = drat, y = mpg)) +
+#' ggplot(pre_post, aes(x = test1, y = test2)) +
 #'   geom_point() +
 #'   ds4ling_theme()
 #'
@@ -21,4 +22,10 @@ ds4ling_theme <- function(...) {
     theme(panel.grid.major = element_blank(),
           panel.grid.minor = element_blank())
   )
+}
+
+.onAttach <- function(libname, pkgname) {
+  message <- c("\n ds4ling loaded",
+               "\n Happy coding!")
+  packageStartupMessage(message)
 }

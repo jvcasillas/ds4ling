@@ -1,10 +1,15 @@
 
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/jvcasillas/ds4ling/workflows/R-CMD-check/badge.svg)](https://github.com/jvcasillas/ds4ling/actions)
+<!-- badges: end -->
+
 ## ds4ling <img src='https://raw.githubusercontent.com/jvcasillas/hex_stickers/master/stickers/ds4ling.png' align='right' width='275px'/>
 
 An R package of datasets and functions made to complement the ds4ling
 course.
 
-Last update: 2021-01-14
+Last update: 2021-01-23
 
 ### Overview
 
@@ -21,6 +26,6 @@ You can install the development version from GitHub with:
 
 ### Datasets
 
-  - test\_scores\_rm
-  - test\_scores
-  - vocab\_data
+-   test\_scores\_rm
+-   test\_scores
+-   vocab\_data

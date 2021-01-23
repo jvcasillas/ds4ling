@@ -2,9 +2,11 @@
 
 export(ds4ling_theme)
 export(gg_qqplot)
+import(academicWriteR)
 import(dplyr)
 import(ggplot2)
 import(tibble)
+import(untidydata)
 importFrom(rlang,.data)
 importFrom(stats,cor)
 importFrom(stats,qqnorm)
