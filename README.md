@@ -1,7 +1,8 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/jvcasillas/ds4ling/workflows/R-CMD-check/badge.svg)](https://github.com/jvcasillas/ds4ling/actions)
+[![R-CMD-check](https://github.com/jvcasillas/ds4ling/workflows/R-CMD-check/badge.svg)](https://github.com/jvcasillas/ds4ling/actions)  
+[![CodeFactor](https://www.codefactor.io/repository/github/jvcasillas/ds4ling/badge)](https://www.codefactor.io/repository/github/jvcasillas/ds4ling)
 <!-- badges: end -->
 
 ## ds4ling <img src='https://raw.githubusercontent.com/jvcasillas/hex_stickers/master/stickers/ds4ling.png' align='right' width='275px'/>
@@ -9,7 +10,7 @@
 An R package of datasets and functions made to complement the ds4ling
 course.
 
-Last update: 2021-01-23
+Last update: 2021-01-27
 
 ### Overview
 
