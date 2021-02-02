@@ -1,3 +1,7 @@
 ^ds4ling\.Rproj$
 ^\.Rproj\.user$
 ^\.github$
+
+^README.Rmd
+^data-raw
+^docs
