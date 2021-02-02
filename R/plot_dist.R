@@ -4,21 +4,20 @@
 #' supplied mean and standard deviation.
 #'
 #' @param plot_dist A function for plotting normal distributions
-#' @param distribution A disttribution type (defaults to gaussian)
+#' @param distribution A distribution type (defaults to gaussian)
 #' @param range A vector of 2 values indicating the range for the x-axis and
 #' the data
 #' @param mean A numeric value for the center of gravity of the distribution
 #' (defaults to 0)
 #' @param sd A numeric value for the standard deviation of the distribution
 #' (defaults to 1)
-#' @param shift If the distribution is not gaussian, shift can be supplied to
-#' shift a logistic function horizontally (experimental)
 #' @param ... Arguments to be passed to ggplot. Specifically 'font_color' and
 #' 'tex'.
 #' @keywords plot
 #' @import ggplot2
 #' @importFrom latex2exp TeX
 #' @importFrom stats dnorm
+#' @importFrom stats pnorm
 #' @importFrom rlang .data
 #' @export
 #' @examples
@@ -29,7 +28,7 @@
 #' plot_dist(tex = "$Hello_{\\Delta} = 4^5$")
 
 plot_dist <- function(distribution = "gaussian", range = c(-3, 3), mean = 0,
-                      sd = 1, shift = 1, ...) {
+                      sd = 1, ...) {
 
   # Get some dots
   extras <- list(...)
@@ -52,33 +51,21 @@ plot_dist <- function(distribution = "gaussian", range = c(-3, 3), mean = 0,
       output = "character")
   }
 
-  # Plot normal dist or sigmoid
   if (distribution == "gaussian") {
-
-    p <- ggplot(data.frame(x = range)) +
-      aes(x = .data$x) +
-      stat_function(fun = dnorm, n = 100, args = list(mean = mean, sd = sd),
-        size = 1) +
-      annotate("text", x = range[1] + sd, y = dnorm(mean, mean, sd) * 0.5,
-        size = 7, label = tex_formula, color = color, parse = TRUE) +
-      ds4ling::ds4ling_theme() +
-      theme(axis.line = element_line(colour = "black"))
-
-
+    dist <- dnorm
   } else {
-
-    p <- ggplot(data.frame(x = range)) +
-      aes(x = .data$x) +
-      stat_function(fun = log_fun, args = list(shift = shift), size = 1) +
-      ds4ling::ds4ling_theme() +
-      theme(axis.line = element_line(colour = "black"))
-
+    dist <- pnorm
   }
-  return(p)
-}
 
-# Logistic function
-log_fun <- function(x, shift = 1) {
-  y <- exp(x) / (shift + exp(x))
-  return(y)
+  # Plot normal dist or sigmoid
+  p <- ggplot(data.frame(x = range)) +
+    aes(x = .data$x) +
+    stat_function(fun = dist, n = 100, args = list(mean = mean, sd = sd),
+      size = 1) +
+    annotate("text", x = range[1] + sd, y = dnorm(mean, mean, sd) * 0.5,
+      size = 7, label = tex_formula, color = color, parse = TRUE) +
+    ds4ling::ds4ling_theme() +
+    theme(axis.line = element_line(colour = "black"))
+
+  return(p)
 }

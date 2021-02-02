@@ -4,17 +4,10 @@
 \alias{plot_dist}
 \title{A function to plot distributions}
 \usage{
-plot_dist(
-  distribution = "gaussian",
-  range = c(-3, 3),
-  mean = 0,
-  sd = 1,
-  shift = 1,
-  ...
-)
+plot_dist(distribution = "gaussian", range = c(-3, 3), mean = 0, sd = 1, ...)
 }
 \arguments{
-\item{distribution}{A disttribution type (defaults to gaussian)}
+\item{distribution}{A distribution type (defaults to gaussian)}
 
 \item{range}{A vector of 2 values indicating the range for the x-axis and
 the data}
@@ -24,9 +17,6 @@ the data}
 
 \item{sd}{A numeric value for the standard deviation of the distribution
 (defaults to 1)}
-
-\item{shift}{If the distribution is not gaussian, shift can be supplied to
-shift a logistic function horizontally (experimental)}
 
 \item{...}{Arguments to be passed to ggplot. Specifically 'font_color' and
 'tex'.}
