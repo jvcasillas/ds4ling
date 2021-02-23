@@ -1,13 +1,46 @@
 ---
-title: "Getting started with learnr"
+title: "Getting started with R"
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
 
 ```{r setup, include=FALSE}
 library(learnr)
+library(tidyverse)
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+```{r, child='./lessons/00_intro.Rmd'}
+```
+
+```{r, child='./lessons/01_working_directories.Rmd'}
+```
+
+```{r, child='./lessons/02_install_packages.Rmd'}
+```
+
+```{r, child='./lessons/03_load_packages.Rmd'}
+```
+
+```{r, child='./lessons/04_comments.Rmd'}
+```
+
+```{r, child='./lessons/05_r_as_a_calculator.Rmd'}
+```
+
+```{r, child='./lessons/06_assigning_variables.Rmd'}
+```
+
+```{r, child='./lessons/07_data_structures.Rmd'}
+```
+
+<!-- links -->
+
+[lingStuff]: http://www.jvcasillas.com/lingStuff/index.html
+[tidyverse]: https://www.tidyverse.org
+[GitHub_lingStuff]: https://github.com/jvcasillas/lingStuff
+
+
 
 
 ## Topic 1
