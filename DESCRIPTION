@@ -1,7 +1,7 @@
 Package: ds4ling
 Type: Package
 Title: Datasets and Functions developed for SPAN589: Data Science for Linguists
-Version: 0.3
+Version: 0.4
 Authors@R: 
     person(given = "Joseph",
            family = "Casillas",
