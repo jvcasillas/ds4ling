@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Repeated measures test score data (synthetic). — test_scores_rm • ds4ling</title>
+<title>A function to plot model diagnostics — diagnosis • ds4ling</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,9 @@
 
 
 
-<meta property="og:title" content="Repeated measures test score data (synthetic). — test_scores_rm" />
-<meta property="og:description" content="A synthetic dataset for teaching correlations" />
+<meta property="og:title" content="A function to plot model diagnostics — diagnosis" />
+<meta property="og:description" content="This function generates a series of plots that can be used to check some
+model assumptions in linear models." />
 
 
 
@@ -108,32 +109,43 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Repeated measures test score data (synthetic).</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jvcasillas/ds4ling/blob/master/R/test_scores_rm.R'><code>R/test_scores_rm.R</code></a></small>
-    <div class="hidden name"><code>test_scores_rm.Rd</code></div>
+    <h1>A function to plot model diagnostics</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jvcasillas/ds4ling/blob/master/R/diagnosis.R'><code>R/diagnosis.R</code></a></small>
+    <div class="hidden name"><code>diagnosis.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>A synthetic dataset for teaching correlations</p>
+    <p>This function generates a series of plots that can be used to check some
+model assumptions in linear models.</p>
     </div>
 
-    <pre class="usage"><span class='va'>test_scores_rm</span></pre>
+    <pre class="usage"><span class='fu'>diagnosis</span><span class='op'>(</span><span class='va'>mod</span><span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>mod</th>
+      <td><p>A model object</p></td>
+    </tr>
+    <tr>
+      <th>diagnosis</th>
+      <td><p>A function for plotting model diagnostics</p></td>
+    </tr>
+    </table>
 
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>A data frame with 16 rows and 4 variables:</p><dl>
-<dt>id</dt><dd><p>Participant ID</p></dd>
-<dt>spec</dt><dd><p>Grouping variable (untidy) specifying group number and level</p></dd>
-<dt>test1</dt><dd><p>Raw pre-test score</p></dd>
-<dt>test2</dt><dd><p>Raw post-test score</p></dd>
+    <p>The left panel shows residuals as a function of fitted values and is useful
+for checking homoskedasticity.</p>
+<p>The middle panel plots a histogram of the residuals with a vertical
+discontinuous line that represents the mean.</p>
+<p>The right panel provides a qq-plot of the residuals.</p>
 
-</dl>
-
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p><a href='https://github.com/jvcasillas/ds4ling'>https://github.com/jvcasillas/ds4ling</a></p>
-
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='va'>mod1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>drat</span>, data <span class='op'>=</span> <span class='va'>mtcars</span><span class='op'>)</span>
+<span class='fu'>diagnosis</span><span class='op'>(</span><span class='va'>mod1</span><span class='op'>)</span>
+</div><div class='img'><img src='diagnosis-1.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

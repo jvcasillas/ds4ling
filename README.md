@@ -10,7 +10,7 @@
 An R package of datasets and functions made to complement the ds4ling
 course.
 
-Last update: 2021-02-23
+Last update: 2021-02-26
 
 ### Overview
 
