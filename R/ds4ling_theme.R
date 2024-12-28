@@ -19,7 +19,7 @@
 # ds4ling theme
 ds4ling_theme <- function(...) {
   list(
-    theme_minimal(base_family = 'Times', base_size = 20),
+    theme_minimal(base_family = 'Palatino', base_size = 20),
     theme(panel.grid.major = element_blank(),
           panel.grid.minor = element_blank())
   )

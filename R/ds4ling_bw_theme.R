@@ -19,7 +19,7 @@
 # ds4ling bw theme
 ds4ling_bw_theme <- function(...) {
   list(
-    theme_bw(...),
+    theme_bw(base_family = "Palatino", ...),
     theme(
       axis.title.y = element_text(size = rel(.9), hjust = 0.95),
       axis.title.x = element_text(size = rel(.9), hjust = 0.95),

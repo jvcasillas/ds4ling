@@ -31,7 +31,7 @@ diagnosis <- function(mod) {
   resid_cog <- mean(resid)
   fd_bw <- 2 * IQR(resid) / length(resid)^(1/3)
 
-  p1 <- data.frame(resid, fitted) %>%
+  p1 <- data.frame(resid, fitted) |>
     ggplot() +
     aes(x = .data$fitted, y = .data$resid) +
     geom_hline(yintercept = 0, lty = 3) +
@@ -39,7 +39,7 @@ diagnosis <- function(mod) {
     labs(y = "Residuals", x = "Fitted values") +
     ds4ling::ds4ling_bw_theme()
 
-  p2 <- data.frame(x = resid) %>%
+  p2 <- data.frame(x = resid) |>
     ggplot() +
     aes(x = .data$x) +
     geom_histogram(color = "black", fill = "grey70", binwidth = fd_bw) +
