@@ -10,7 +10,7 @@
 An R package of datasets and functions made to complement the ds4ling
 course.
 
-Last update: 2021-04-04
+Last update: 2025-02-19
 
 ### Overview
 
@@ -27,10 +27,11 @@ You can install the development version from GitHub with:
 
 ### Datasets
 
--   assumptions\_data
--   ice\_cream\_poisson\_data
--   mrc\_ex\_data
--   test\_scores\_rm
--   test\_scores
--   vocab\_data
--   vot\_logistic\_data
+- assumptions_data
+- ice_cream_poisson_data
+- mrc_ex_data
+- riverside
+- test_scores_rm
+- test_scores
+- vocab_data
+- vot_logistic_data
