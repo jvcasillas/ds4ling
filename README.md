@@ -10,7 +10,7 @@
 An R package of datasets and functions made to complement the ds4ling
 course.
 
-Last update: 2025-02-19
+Last update: 2025-02-26
 
 ### Overview
 
@@ -28,6 +28,7 @@ You can install the development version from GitHub with:
 ### Datasets
 
 - assumptions_data
+- consumption
 - ice_cream_poisson_data
 - mrc_ex_data
 - riverside
