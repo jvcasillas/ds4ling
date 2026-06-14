@@ -23,7 +23,7 @@ ds4ling_bw_theme <- function(...) {
     theme(
       axis.title.y = element_text(size = rel(.9), hjust = 0.95),
       axis.title.x = element_text(size = rel(.9), hjust = 0.95),
-      panel.grid.major = element_line(colour = 'grey90', size = 0.15),
-      panel.grid.minor = element_line(colour = 'grey90', size = 0.15))
+      panel.grid.major = element_line(colour = 'grey90', linewidth = 0.15),
+      panel.grid.minor = element_line(colour = 'grey90', linewidth = 0.15))
   )
 }
